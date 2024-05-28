@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff00ff, #00f0ff);
+    overflow-x: hidden;
+}
+
+header {
+    background: #000000;
+    color: #ff00ff;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header h1 {
+    font-size: 3rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ff00ff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-container {
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(45% - 40px);
+    transition: transform 0.3s;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-container p {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 10px 0 0;
+}
+
+.advertisement {
+    background: #ff00ff;
+    color: #ffffff;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.advertisement h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+
+.advertisement p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.advertisement button {
+    background: #ffffff;
+    color: #ff00ff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.advertisement button:hover {
+    background: #ff00ff;
+    color: #ffffff;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes floatEmojis {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatEmojis 10s linear infinite;
+    opacity: 0.8;
+}
+
+.emoji:nth-child(odd) {
+    animation-duration: 15s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .image-container {
+        flex: 1 1 100%;
+    }
+}
